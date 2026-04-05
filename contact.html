@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Black Mountain Technologies</title>
+  <meta name="description" content="Get in touch with Black Mountain Technologies. Inquire about pricing for the Cost Overrun Solution or Job Cost Tracker. Built for Canadian general contractors.">
+  <meta property="og:title" content="Contact — Black Mountain Technologies">
+  <meta property="og:description" content="Inquire about pricing for contractor cost tracking and overrun prevention tools.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <a href="index.html" class="nav-home" aria-label="Home">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="cost-overrun.html">Cost Overrun Solution</a></li>
+        <li><a href="job-cost-tracker.html">Job Cost Tracker</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="btn-nav">Get in Touch</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <h1>Let's talk.</h1>
+    <p>Tell us about your business. We'll tell you where you're likely losing money — and which tool fits.</p>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="contact-form-section">
+    <div class="container">
+      <form class="contact-form fade-in" id="contactForm" onsubmit="handleSubmit(event)">
+
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required placeholder="John Smith">
+        </div>
+
+        <div class="form-group">
+          <label for="company">Company Name</label>
+          <input type="text" id="company" name="company" required placeholder="Smith Construction Ltd.">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="john@smithconstruction.ca">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone (optional)</label>
+          <input type="tel" id="phone" name="phone" placeholder="(250) 555-0100">
+        </div>
+
+        <div class="form-group">
+          <label for="revenue">Annual Revenue Range</label>
+          <select id="revenue" name="revenue" required>
+            <option value="" disabled selected>Select a range</option>
+            <option value="under-10m">Under $10M</option>
+            <option value="10m-50m">$10M – $50M</option>
+            <option value="50m-100m">$50M – $100M</option>
+            <option value="100m-250m">$100M – $250M</option>
+            <option value="250m-500m">$250M – $500M</option>
+            <option value="500m-plus">$500M+</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="product">Which tool are you interested in?</label>
+          <select id="product" name="product" required>
+            <option value="" disabled selected>Select a tool</option>
+            <option value="cost-overrun">Cost Overrun Solution</option>
+            <option value="job-cost-tracker">Job Cost Tracker</option>
+            <option value="both">Both — help me decide</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Tell us about your situation (optional)</label>
+          <textarea id="message" name="message" placeholder="How many active projects do you typically run? What's your biggest pain point with cost tracking right now?"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Inquiry</button>
+
+      </form>
+
+      <div id="formSuccess" style="display: none; text-align: center; padding: 80px 0;">
+        <h3>Got it.</h3>
+        <p style="margin-top: 16px;">We'll be in touch within one business day. If it's urgent, reply to the confirmation email.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-left">
+        <img src="assets/logo.png" alt="BMT" class="footer-logo">
+        <span class="footer-copy">&copy; 2026 Black Mountain Technologies Inc.</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="cost-overrun.html">Cost Overrun Solution</a></li>
+        <li><a href="job-cost-tracker.html">Job Cost Tracker</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
