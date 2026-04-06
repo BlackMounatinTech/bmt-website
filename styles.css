@@ -130,6 +130,10 @@ nav .container {
   width: auto;
 }
 
+.nav-spacer {
+  width: 40px;
+}
+
 .nav-home {
   display: none;
   flex-direction: column;
