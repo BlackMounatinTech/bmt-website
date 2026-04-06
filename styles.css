@@ -131,7 +131,7 @@ nav .container {
 }
 
 .nav-home {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 5px;
   padding: 8px 0;
@@ -895,6 +895,7 @@ footer .container {
   }
 
   .nav-home {
+    display: flex;
     z-index: 10;
   }
 
