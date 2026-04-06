@@ -1,0 +1,9 @@
+.DS_Store
+*.png
+!assets/favicon.png
+!assets/apple-touch-icon.png
+!assets/logo.png
+*.jpeg
+*.jpg
+Screenshot*
+IMG_*
