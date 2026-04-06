@@ -16,10 +16,15 @@
   video.load();
 })();
 
-// Mobile nav toggle
-function toggleMenu() {
-  document.getElementById('navLinks').classList.toggle('active');
-}
+// Mobile nav toggle — three lines open menu on mobile, go home on desktop
+document.querySelectorAll('.nav-home').forEach(function(navHome) {
+  navHome.addEventListener('click', function(e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+  });
+});
 
 // Close mobile menu when clicking a link
 document.querySelectorAll('.nav-links a').forEach(link => {
