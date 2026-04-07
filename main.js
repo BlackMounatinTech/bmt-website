@@ -44,6 +44,12 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-in, .fade-section').forEach(el => observer.observe(el));
 
+// Compliance accordion toggle
+function toggleCompliance(btn) {
+  var item = btn.parentElement;
+  item.classList.toggle('open');
+}
+
 // Demo tab switching
 function switchDemo(product) {
   document.querySelectorAll('.demo-tab').forEach(tab => tab.classList.remove('active'));

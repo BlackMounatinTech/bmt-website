@@ -829,6 +829,61 @@ footer .container {
 }
 
 /* ============================================
+   COMPLIANCE ACCORDION
+   ============================================ */
+.compliance-item {
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.compliance-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  background: none;
+  border: none;
+  font-family: var(--font-main);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--black);
+  cursor: pointer;
+  text-align: left;
+}
+
+.compliance-toggle:hover {
+  color: var(--gray-600);
+}
+
+.compliance-icon {
+  font-size: 20px;
+  font-weight: 300;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+
+.compliance-item.open .compliance-icon {
+  transform: rotate(45deg);
+}
+
+.compliance-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.compliance-item.open .compliance-content {
+  max-height: 200px;
+  padding-bottom: 18px;
+}
+
+.compliance-content p {
+  font-size: 15px;
+  color: var(--gray-600);
+}
+
+/* ============================================
    ANIMATIONS
    ============================================ */
 .fade-in {
