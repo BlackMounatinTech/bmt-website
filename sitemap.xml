@@ -2,27 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://blackmountaintech.ca/</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://blackmountaintech.ca/cost-overrun.html</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://blackmountaintech.ca/job-cost-tracker.html</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://blackmountaintech.ca/about.html</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://blackmountaintech.ca/contact.html</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-04-07</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blackmountaintech.ca/blog/</loc>
+    <lastmod>2026-04-07</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blackmountaintech.ca/blog/prevent-cost-overruns.html</loc>
+    <lastmod>2026-04-07</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blackmountaintech.ca/blog/ai-in-construction.html</loc>
+    <lastmod>2026-04-07</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blackmountaintech.ca/blog/why-contractors-lose-money.html</loc>
+    <lastmod>2026-04-07</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>
