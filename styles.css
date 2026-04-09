@@ -125,13 +125,14 @@ nav .container {
   height: 64px;
 }
 
-.nav-logo {
-  height: 40px;
-  width: auto;
+.nav-logo-link {
+  display: flex;
+  align-items: center;
 }
 
-.nav-spacer {
-  width: 40px;
+.nav-logo {
+  height: 36px;
+  width: auto;
 }
 
 .nav-home {
@@ -1019,6 +1020,10 @@ footer .container {
 
   .nav-links.active {
     display: flex;
+  }
+
+  .nav-logo-link {
+    display: none;
   }
 
   .nav-home {
