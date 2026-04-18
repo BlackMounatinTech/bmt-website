@@ -1,44 +1,18 @@
-// Load hero video only when first frame is ready, prevents black flash
-// Uses mp4 for universal browser support, mov as fallback
+// Load video only when first frame is ready, prevents black flash
 (function() {
-  var slot = document.getElementById('videoSlot');
-  if (!slot) return;
-
   var video = document.createElement('video');
   video.muted = true;
   video.loop = true;
-  video.autoplay = true;
   video.playsInline = true;
-  video.setAttribute('muted', '');
-  video.setAttribute('loop', '');
-  video.setAttribute('autoplay', '');
   video.setAttribute('playsinline', '');
-  video.setAttribute('webkit-playsinline', '');
-
-  var mp4 = document.createElement('source');
-  mp4.src = 'assets/hero-video.mp4';
-  mp4.type = 'video/mp4';
-  video.appendChild(mp4);
-
-  var mov = document.createElement('source');
-  mov.src = 'assets/hero-video.mov';
-  mov.type = 'video/quicktime';
-  video.appendChild(mov);
-
+  video.src = 'assets/hero-video.mov';
   video.addEventListener('loadeddata', function() {
-    slot.appendChild(video);
-    var playPromise = video.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(function() {
-        // Autoplay was blocked, try again after user interaction
-        document.addEventListener('click', function once() {
-          video.play();
-          document.removeEventListener('click', once);
-        });
-      });
+    var slot = document.getElementById('videoSlot');
+    if (slot) {
+      slot.appendChild(video);
+      video.play();
     }
   });
-
   video.load();
 })();
 
