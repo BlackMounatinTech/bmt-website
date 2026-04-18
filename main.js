@@ -1,18 +1,44 @@
-// Load video only when first frame is ready — prevents black flash
+// Load hero video only when first frame is ready, prevents black flash
+// Uses mp4 for universal browser support, mov as fallback
 (function() {
+  var slot = document.getElementById('videoSlot');
+  if (!slot) return;
+
   var video = document.createElement('video');
   video.muted = true;
   video.loop = true;
+  video.autoplay = true;
   video.playsInline = true;
+  video.setAttribute('muted', '');
+  video.setAttribute('loop', '');
+  video.setAttribute('autoplay', '');
   video.setAttribute('playsinline', '');
-  video.src = 'assets/hero-video.mov';
+  video.setAttribute('webkit-playsinline', '');
+
+  var mp4 = document.createElement('source');
+  mp4.src = 'assets/hero-video.mp4';
+  mp4.type = 'video/mp4';
+  video.appendChild(mp4);
+
+  var mov = document.createElement('source');
+  mov.src = 'assets/hero-video.mov';
+  mov.type = 'video/quicktime';
+  video.appendChild(mov);
+
   video.addEventListener('loadeddata', function() {
-    var slot = document.getElementById('videoSlot');
-    if (slot) {
-      slot.appendChild(video);
-      video.play();
+    slot.appendChild(video);
+    var playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(function() {
+        // Autoplay was blocked, try again after user interaction
+        document.addEventListener('click', function once() {
+          video.play();
+          document.removeEventListener('click', once);
+        });
+      });
     }
   });
+
   video.load();
 })();
 
@@ -48,23 +74,4 @@ document.querySelectorAll('.fade-in, .fade-section').forEach(el => observer.obse
 function toggleCompliance(btn) {
   var item = btn.parentElement;
   item.classList.toggle('open');
-}
-
-// Demo tab switching
-function switchDemo(product) {
-  document.querySelectorAll('.demo-tab').forEach(tab => tab.classList.remove('active'));
-  event.target.classList.add('active');
-
-  const content = document.getElementById('demoContent');
-  if (product === 'overrun') {
-    content.innerHTML = `
-      <p>Interactive demo coming soon.</p>
-      <p style="margin-top: 12px;"><a href="contact.html" class="btn-text">Request a live walkthrough</a></p>
-    `;
-  } else {
-    content.innerHTML = `
-      <p>Interactive demo coming soon.</p>
-      <p style="margin-top: 12px;"><a href="contact.html" class="btn-text">Request a live walkthrough</a></p>
-    `;
-  }
 }
