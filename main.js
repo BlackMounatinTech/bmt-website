@@ -16,7 +16,7 @@
   video.load();
 })();
 
-// Mobile nav toggle — three lines open menu on mobile, go home on desktop
+// Mobile nav toggle. Three lines open menu on mobile, go home on desktop
 document.querySelectorAll('.nav-home').forEach(function(navHome) {
   navHome.addEventListener('click', function(e) {
     if (window.innerWidth <= 768) {
