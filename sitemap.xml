@@ -26,6 +26,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://blackmountaintech.ca/scorecard.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <priority>0.95</priority>
+  </url>
+  <url>
     <loc>https://blackmountaintech.ca/blog/</loc>
     <lastmod>2026-04-12</lastmod>
     <priority>0.8</priority>
