@@ -412,6 +412,77 @@ nav .container {
   margin: 0 auto;
 }
 
+.product-cards-three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-cards-three .product-card {
+  padding: 40px 32px;
+}
+
+.product-cards-three .product-card h3 {
+  font-size: 24px;
+}
+
+@media (max-width: 900px) {
+  .product-cards-three {
+    grid-template-columns: 1fr;
+  }
+}
+
+.anchor-stat {
+  padding: 48px 24px;
+  text-align: center;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.anchor-stat-line {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--black);
+  max-width: 880px;
+  margin: 0 auto;
+  line-height: 1.45;
+}
+
+.proof-points {
+  padding: 100px 24px;
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.proof-item p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--gray-700);
+  font-weight: 500;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .anchor-stat-line {
+    font-size: 18px;
+  }
+  .proof-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .proof-points {
+    padding: 60px 24px;
+  }
+}
+
 .product-card {
   text-align: left;
   padding: 48px;
