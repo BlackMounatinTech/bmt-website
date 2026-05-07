@@ -1,54 +1,19 @@
-// Load hero video. Tries .mov first (best for Safari), falls back to .mp4
-// if Chrome/Firefox refuses the QuickTime container. Retries play on first
-// user interaction if the browser blocks autoplay.
+// Load video only when first frame is ready, prevents black flash
 (function() {
-  var slot = document.getElementById('videoSlot');
-  if (!slot) return;
-
-  function attach(video) {
-    if (slot.contains(video)) return;
-    slot.appendChild(video);
-    var p = video.play();
-    if (p && p.catch) {
-      p.catch(function() {
-        var retry = function() {
-          video.play();
-          document.removeEventListener('click', retry);
-          document.removeEventListener('touchstart', retry);
-        };
-        document.addEventListener('click', retry, { once: true });
-        document.addEventListener('touchstart', retry, { once: true });
-      });
+  var video = document.createElement('video');
+  video.muted = true;
+  video.loop = true;
+  video.playsInline = true;
+  video.setAttribute('playsinline', '');
+  video.src = 'assets/hero-video.mov';
+  video.addEventListener('loadeddata', function() {
+    var slot = document.getElementById('videoSlot');
+    if (slot) {
+      slot.appendChild(video);
+      video.play();
     }
-  }
-
-  function makeVideo(src) {
-    var v = document.createElement('video');
-    v.muted = true;
-    v.loop = true;
-    v.autoplay = true;
-    v.playsInline = true;
-    v.setAttribute('muted', '');
-    v.setAttribute('loop', '');
-    v.setAttribute('autoplay', '');
-    v.setAttribute('playsinline', '');
-    v.setAttribute('webkit-playsinline', '');
-    v.src = src;
-    return v;
-  }
-
-  var primary = makeVideo('assets/hero-video.mov');
-  var fallbackTried = false;
-
-  primary.addEventListener('loadeddata', function() { attach(primary); });
-  primary.addEventListener('error', function() {
-    if (fallbackTried) return;
-    fallbackTried = true;
-    var fb = makeVideo('assets/hero-video.mp4');
-    fb.addEventListener('loadeddata', function() { attach(fb); });
-    fb.load();
   });
-  primary.load();
+  video.load();
 })();
 
 // Mobile nav toggle. Three lines open menu on mobile, go home on desktop
