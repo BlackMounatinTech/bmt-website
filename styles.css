@@ -360,6 +360,26 @@ nav .container {
   margin: 0 auto 40px;
 }
 
+.footer-trust {
+  flex-basis: 100%;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--gray-200);
+  text-align: center;
+}
+
+.footer-trust p {
+  font-size: 14px;
+  color: var(--gray-500);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.footer-trust strong {
+  color: var(--gray-700);
+  font-weight: 600;
+}
+
 .hero-video-container video {
   width: 100%;
   height: auto;
@@ -749,6 +769,7 @@ footer .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .footer-left {
