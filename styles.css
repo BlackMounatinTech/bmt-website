@@ -35,6 +35,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   font-family: var(--font-main);
   color: var(--black);
@@ -361,7 +365,6 @@ nav .container {
 }
 
 .footer-trust {
-  flex-basis: 100%;
   margin-top: 32px;
   padding-top: 24px;
   border-top: 1px solid var(--gray-200);
@@ -769,7 +772,10 @@ footer .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+}
+
+footer .container.footer-trust {
+  display: block;
 }
 
 .footer-left {
