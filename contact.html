@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact: Inquire About Pricing | Black Mountain Technologies</title>
-  <meta name="description" content="Talk to us about the Cost Overrun Solution or Job Cost Tracker. 15 minutes. No pitch deck. We'll show you where you're losing money.">
-  <meta name="keywords" content="contact Black Mountain Technologies, construction tool pricing, cost overrun demo, job cost tracker demo, contractor tools Canada">
-  <meta property="og:title" content="Contact: Black Mountain Technologies">
-  <meta property="og:description" content="15 minutes. No pitch deck. We'll show you where you're losing money.">
+  <title>Book a Call | Black Mountain Technologies</title>
+  <meta name="description" content="Pick a time. 7 AM to 8 PM Vancouver time, seven days a week. Fifteen minutes on the phone. We'll find money on one of your closed jobs.">
+  <meta name="keywords" content="contact Black Mountain Technologies, book a call, construction cost recovery, contractor tools Canada">
+  <meta property="og:title" content="Book a Call | Black Mountain Technologies">
+  <meta property="og:description" content="Pick a time. Fifteen minutes on the phone. We'll find money on one of your closed jobs.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://blackmountaintech.ca/contact.html">
   <meta property="og:image" content="https://blackmountaintech.ca/assets/og-image.png">
@@ -16,8 +16,8 @@
   <meta property="og:image:alt" content="Black Mountain Technologies - Cost tracking tools for general contractors">
   <meta name="twitter:image" content="https://blackmountaintech.ca/assets/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Contact: Black Mountain Technologies">
-  <meta name="twitter:description" content="15 minutes. No pitch deck. We'll show you where you're losing money.">
+  <meta name="twitter:title" content="Book a Call | Black Mountain Technologies">
+  <meta name="twitter:description" content="Pick a time. Fifteen minutes on the phone. We'll find money on one of your closed jobs.">
   <link rel="canonical" href="https://blackmountaintech.ca/contact.html">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -49,8 +49,8 @@
 
   <!-- Page Hero -->
   <section class="page-hero">
-    <h1>Book a 15-minute call.</h1>
-    <p>Fill in a few details. We'll get back to you within one business day to set a time. On the call we'll walk you through the dashboard, run the scorecard on one of your closed jobs, and find your number.</p>
+    <h1>Pick a time. I'll call you.</h1>
+    <p>Anytime between 7 AM and 8 PM Vancouver time. Seven days a week. Fill this in and I'll email you back to lock the time.</p>
   </section>
 
   <!-- Contact Form -->
@@ -59,12 +59,12 @@
       <form class="contact-form fade-in" id="contactForm" action="https://formspree.io/f/maqlvqwq" method="POST">
 
         <div class="form-group">
-          <label for="name">Your Name</label>
+          <label for="name">Your name</label>
           <input type="text" id="name" name="name" required placeholder="John Smith">
         </div>
 
         <div class="form-group">
-          <label for="company">Company Name</label>
+          <label for="company">Company name</label>
           <input type="text" id="company" name="company" required placeholder="Smith Construction Ltd.">
         </div>
 
@@ -74,36 +74,52 @@
         </div>
 
         <div class="form-group">
-          <label for="phone">Phone (optional)</label>
-          <input type="tel" id="phone" name="phone" placeholder="(250) 555-0100">
+          <label for="location">Where you're located</label>
+          <input type="text" id="location" name="location" required placeholder="Calgary, AB">
         </div>
 
         <div class="form-group">
-          <label for="revenue">Annual Revenue Range</label>
-          <select id="revenue" name="revenue" required aria-label="Annual revenue range">
-            <option value="" disabled selected>Select a range</option>
-            <option value="under-10m">Under $10M</option>
-            <option value="10m-50m">$10M – $50M</option>
-            <option value="50m-100m">$50M – $100M</option>
-            <option value="100m-250m">$100M – $250M</option>
-            <option value="250m-500m">$250M – $500M</option>
-            <option value="500m-plus">$500M+</option>
+          <label for="problem">What's going on with costs right now</label>
+          <textarea id="problem" name="problem" required placeholder="A job that ran over. A number that doesn't add up. Anything keeping you up about margins. Doesn't need to be polished."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Preferred date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+
+        <div class="form-group">
+          <label for="time">Preferred time (Vancouver time)</label>
+          <select id="time" name="time" required aria-label="Preferred time, Vancouver time">
+            <option value="" disabled selected>Pick a time</option>
+            <option value="7:00 AM PT">7:00 AM</option>
+            <option value="7:30 AM PT">7:30 AM</option>
+            <option value="8:00 AM PT">8:00 AM</option>
+            <option value="8:30 AM PT">8:30 AM</option>
+            <option value="9:00 AM PT">9:00 AM</option>
+            <option value="9:30 AM PT">9:30 AM</option>
+            <option value="10:00 AM PT">10:00 AM</option>
+            <option value="10:30 AM PT">10:30 AM</option>
+            <option value="11:00 AM PT">11:00 AM</option>
+            <option value="11:30 AM PT">11:30 AM</option>
+            <option value="12:00 PM PT">12:00 PM</option>
+            <option value="12:30 PM PT">12:30 PM</option>
+            <option value="1:00 PM PT">1:00 PM</option>
+            <option value="1:30 PM PT">1:30 PM</option>
+            <option value="2:00 PM PT">2:00 PM</option>
+            <option value="2:30 PM PT">2:30 PM</option>
+            <option value="3:00 PM PT">3:00 PM</option>
+            <option value="3:30 PM PT">3:30 PM</option>
+            <option value="4:00 PM PT">4:00 PM</option>
+            <option value="4:30 PM PT">4:30 PM</option>
+            <option value="5:00 PM PT">5:00 PM</option>
+            <option value="5:30 PM PT">5:30 PM</option>
+            <option value="6:00 PM PT">6:00 PM</option>
+            <option value="6:30 PM PT">6:30 PM</option>
+            <option value="7:00 PM PT">7:00 PM</option>
+            <option value="7:30 PM PT">7:30 PM</option>
+            <option value="8:00 PM PT">8:00 PM</option>
           </select>
-        </div>
-
-        <div class="form-group">
-          <label for="product">What brought you here?</label>
-          <select id="product" name="product" required aria-label="What brought you here">
-            <option value="" disabled selected>Pick one</option>
-            <option value="dashboard">The dashboard</option>
-            <option value="scorecard">The scorecard</option>
-            <option value="exploring">Just looking around</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="message">Anything you want me to know up front (optional)</label>
-          <textarea id="message" name="message" placeholder="How many active jobs you've got going. Biggest thing on your mind about costs. Whatever helps the call."></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary" style="width: 100%;">Send it</button>
@@ -112,7 +128,7 @@
 
       <div id="formSuccess" style="display: none; text-align: center; padding: 80px 0;">
         <h3>Got it.</h3>
-        <p style="margin-top: 16px;">Back to you within one business day to set a time. If something changes on your end, just reply to the confirmation email.</p>
+        <p style="margin-top: 16px;">I'll email you back to confirm the time. Usually same day.</p>
       </div>
     </div>
   </section>

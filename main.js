@@ -5,7 +5,15 @@
   video.loop = true;
   video.playsInline = true;
   video.setAttribute('playsinline', '');
-  video.src = 'assets/hero-video.mov';
+  video.src = 'assets/hero-video.mp4';
+  video.autoplay = true;
+  video.setAttribute('autoplay', '');
+  video.setAttribute('muted', '');
+  video.setAttribute('loop', '');
+  video.addEventListener('ended', function() {
+    video.currentTime = 0;
+    video.play();
+  });
   video.addEventListener('loadeddata', function() {
     var slot = document.getElementById('videoSlot');
     if (slot) {
