@@ -602,15 +602,19 @@ nav .container {
 }
 
 .leak-check-section {
-  background: var(--black);
-  color: var(--white);
+  background: var(--white);
+  color: var(--black);
   text-align: center;
-  padding: 80px 0 40px;
-  border-bottom: 1px solid var(--gray-800);
+  padding: 96px 0 96px;
 }
 
 .leak-check-section h2 {
+  color: var(--black);
   margin-bottom: 0;
+}
+
+.leak-check-section .section-label {
+  color: var(--gray-500);
 }
 
 .ai-section .section-label {
