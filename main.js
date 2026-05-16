@@ -5,7 +5,7 @@
   video.loop = true;
   video.playsInline = true;
   video.setAttribute('playsinline', '');
-  video.src = 'assets/hero-video.mp4';
+  video.src = 'assets/hero-video.mov';
   video.autoplay = true;
   video.setAttribute('autoplay', '');
   video.setAttribute('muted', '');
