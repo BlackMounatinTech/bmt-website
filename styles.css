@@ -604,7 +604,7 @@ nav .container {
   background: var(--white);
   color: var(--black);
   text-align: center;
-  padding: 64px 0 80px;
+  padding: 16px 0 80px;
 }
 
 .leak-check-section h2 {
