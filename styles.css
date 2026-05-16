@@ -279,7 +279,7 @@ nav .container {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 140px 24px 64px;
+  padding: 120px 24px 96px;
   position: relative;
 }
 
@@ -360,7 +360,7 @@ nav .container {
 .hero-video-container {
   width: 100%;
   max-width: 800px;
-  margin: 0 auto 40px;
+  margin: 64px auto 0;
 }
 
 .footer-trust {
