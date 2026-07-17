@@ -131,11 +131,16 @@ nav .container {
 }
 
 .nav-logo-link {
-  display: none;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 24px;
+  top: 0;
+  height: 100%;
 }
 
 .nav-logo {
-  height: 36px;
+  height: 42px;
   width: auto;
 }
 
@@ -1297,7 +1302,7 @@ footer .container.footer-trust {
   }
 
   .nav-logo-link {
-    display: none;
+    display: flex;
   }
 
   .nav-home {
