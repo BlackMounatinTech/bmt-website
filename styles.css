@@ -378,10 +378,6 @@ nav .container {
   letter-spacing: 0.01em;
 }
 
-.hero-guarantee::before {
-  content: "🛡️";
-  font-size: 15px;
-}
 
 /* Guarantee badges */
 .guarantee-badges {
