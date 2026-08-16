@@ -1593,3 +1593,10 @@ footer .container.footer-trust {
     flex-direction: column;
   }
 }
+
+/* Risk-reversal emphasis (money-back leads) */
+.hero-guarantee strong{color:#15803d;font-weight:800;}
+.guarantee-badge--feature{border:2px solid var(--brand-green);box-shadow:0 12px 30px rgba(22,163,74,.16);position:relative;}
+.guarantee-badge--feature .guarantee-check{width:48px;height:48px;font-size:24px;}
+.guarantee-badge--feature h4{font-size:19px;}
+.guarantee-pill{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--brand-green);color:#fff;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:3px 12px;border-radius:980px;white-space:nowrap;}
