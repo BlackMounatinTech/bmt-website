@@ -41,16 +41,24 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
 });
 
-// Fade-in on scroll
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.1 });
+// Fade-in on scroll.
+// Progressive enhancement only: .fade-in elements start hidden via CSS and get
+// revealed here. .fade-section content is never hidden by CSS, so a failure in
+// this block can never blank out part of the page.
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
 
-document.querySelectorAll('.fade-in, .fade-section').forEach(el => observer.observe(el));
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+} else {
+  document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
+}
 
 // Compliance accordion toggle
 function toggleCompliance(btn) {

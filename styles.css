@@ -1482,10 +1482,13 @@ footer .container.footer-trust {
   transform: translateY(0);
 }
 
+/* Content is ALWAYS visible. The scroll reveal is a pure enhancement that can
+   only ever fade content IN, never hide it. A JS or observer failure must never
+   cost us a section of a sales page. */
 .fade-section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.9s ease, transform 0.9s ease;
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 .fade-section.visible {
@@ -1520,18 +1523,17 @@ footer .container.footer-trust {
     --section-padding: 80px 20px;
   }
 
+  /* The nav holds only the booking CTA now, so keep it visible on mobile
+     instead of hiding it behind a menu. The button IS the nav. */
   .nav-links {
-    display: none;
-    position: absolute;
-    top: 64px;
-    left: 0;
-    right: 0;
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(20px);
-    flex-direction: column;
-    padding: 24px;
-    gap: 20px;
-    border-bottom: 1px solid var(--gray-200);
+    display: flex;
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 0;
+    background: none;
+    border: none;
   }
 
   .nav-links.active {
