@@ -12,33 +12,33 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Black Mountain Technologies: Missed-Call Text-Back for Real Estate Agents</title>
-  <meta name="description" content="A missed call is a listing that goes to the next agent. When you can't answer, we text them back in seconds, find out what they need, and hand you a warm lead. Book a 15-minute call.">
-  <meta name="keywords" content="realtor missed calls, real estate lead response, missed call text back realtor, speed to lead real estate, real estate agent automation">
-  <meta property="og:title" content="Every Missed Call Is a Listing Going to Another Agent | Black Mountain Technologies">
-  <meta property="og:description" content="When you can't answer, we text them back in seconds and capture the lead so you can call them back first. Done for you. Book a 15-minute call.">
+  <title>Black Mountain Technologies: Missed-Call Text-Back for Contractors</title>
+  <meta name="description" content="Missed the call? You just missed the job. When you can't answer, we text them back in seconds, capture the lead, and gather their info so you can call them back before they reach the next contractor. Book a free demo today.">
+  <meta name="keywords" content="missed call text back, contractor missed calls, construction lead recovery, missed call automation, contractor phone automation">
+  <meta property="og:title" content="Stop Letting Missed Calls Mean Missed Money | Black Mountain Technologies">
+  <meta property="og:description" content="When you can't answer the phone, we text them back in seconds and capture the lead so you can call them back. Done for you. Book a free demo today.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://blackmountaintech.ca">
   <meta property="og:image" content="https://blackmountaintech.ca/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Black Mountain Technologies - Missed-call text-back for real estate agents">
+  <meta property="og:image:alt" content="Black Mountain Technologies - Missed-call text-back for contractors">
   <meta name="twitter:image" content="https://blackmountaintech.ca/assets/og-image.png">
   <meta property="og:site_name" content="Black Mountain Technologies">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Every Missed Call Is a Listing Going to Another Agent">
-  <meta name="twitter:description" content="When you can't answer, we text them back in seconds and capture the lead so you can call them back first. Book a 15-minute call.">
+  <meta name="twitter:title" content="Stop Letting Missed Calls Mean Missed Money">
+  <meta name="twitter:description" content="When you can't answer the phone, we text them back in seconds and capture the lead so you can call them back. Book a free demo today.">
   <link rel="canonical" href="https://blackmountaintech.ca">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="styles.css?v=20260908a">
+  <link rel="stylesheet" href="styles.css?v=20260816a">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Black Mountain Technologies",
     "url": "https://blackmountaintech.ca",
-    "description": "Missed-call text-back for real estate agents. When you can't answer, we text them back in seconds and capture the lead so you can call them back first. Based in British Columbia, Canada.",
+    "description": "Missed-call text-back for construction companies. When you can't answer, we text them back in seconds and capture the lead so you can call them back. Based in British Columbia, Canada.",
     "founder": {
       "@type": "Person",
       "name": "Michael Mackrell"
@@ -78,7 +78,7 @@
         <li><a href="#how">How It Works</a></li>
         <li><a href="#why">Why It Works</a></li>
         <li><a href="#trust">Your Data</a></li>
-        <li><a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2OlZ9rZ4mJamSR7L7h4c4WKMCAvyHrhgI7JeXjG6Jq-ywjh8hhdr-fsr69kFmXrvgtCOgiLoFD" class="btn-nav">Book a 15-min call</a></li>
+        <li><a href="contact.html" class="btn-nav">Book a Free Demo</a></li>
       </ul>
     </div>
   </nav>
@@ -86,11 +86,11 @@
   <!-- Block 1: Hero -->
   <section class="hero">
     <div class="container">
-      <p class="section-label" style="color: var(--brand-blue);">Missed-Call Text-Back for Real Estate Agents</p>
-      <h1>You just missed a call.<br><span class="accent">They're already dialing the next agent.</span><br>We fix that.</h1>
-      <p class="hero-sub">You're in a showing, at a signing, or driving. The call rings out. We text them back in seconds in your name, find out whether they're buying or selling, and hand you a warm lead ready to call. Done for you, automatically, without you learning a thing.</p>
+      <p class="section-label" style="color: var(--brand-blue);">Missed-Call Text-Back for Contractors</p>
+      <h1>Missed the call? You just missed the job.<br><span class="accent">A potential five figures in revenue, gone.</span><br>We fix that.</h1>
+      <p class="hero-sub">When you can't answer the phone, we text them back in seconds, capture the lead, and gather their information, so you can call them back and win the job. Done for you, automatically, without you learning a thing.</p>
       <div class="hero-buttons" style="margin-top: 48px;">
-        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2OlZ9rZ4mJamSR7L7h4c4WKMCAvyHrhgI7JeXjG6Jq-ywjh8hhdr-fsr69kFmXrvgtCOgiLoFD" class="btn btn-primary">Book a 15-min call</a>
+        <a href="contact.html" class="btn btn-primary">Book a free demo today</a>
         <a href="sms:+12502542377" class="btn btn-secondary">Text us: (250) 254-2377</a>
       </div>
       <div style="text-align:center;"><span class="hero-guarantee"><strong>30-day money-back guarantee</strong> &middot; No contract &middot; Cancel anytime</span></div>
@@ -100,17 +100,17 @@
           <div class="phone-notch"></div>
           <div class="phone-header">
             <div class="phone-avatar">BM</div>
-            <div class="phone-name">Your Brokerage</div>
+            <div class="phone-name">Black Mountain</div>
             <div class="phone-status">Text Message &middot; now</div>
           </div>
           <div class="phone-thread">
             <div class="phone-missed"><strong>Missed call</strong> &middot; 2:14 PM</div>
-            <div class="bubble bubble-us">Hi, sorry I missed your call, I'm with a client right now. This is Sarah. Are you looking to buy or sell?</div>
+            <div class="bubble bubble-us">Hi, sorry we missed your call. This is Black Mountain. What can we help you with?</div>
             <div class="bubble-label">Delivered &middot; sent in 8 seconds</div>
-            <div class="bubble bubble-them">Hi, saw your listing on Maple St, wanted to book a viewing</div>
-            <div class="bubble bubble-us">Perfect. What days work best for you this week?</div>
-            <div class="bubble bubble-them">Thursday or Friday afternoon</div>
-            <div class="bubble bubble-us">Got it, I'll call you shortly to lock that in. Thank you.</div>
+            <div class="bubble bubble-them">Hi, looking for a quote on a gravel driveway</div>
+            <div class="bubble bubble-us">Happy to help. What's the address and the best number to reach you?</div>
+            <div class="bubble bubble-them">210 Ridgeline Rd, and this number is best</div>
+            <div class="bubble bubble-us">Got it, we'll give you a call back shortly. Thank you.</div>
           </div>
         </div>
       </div>
@@ -121,8 +121,8 @@
   <section class="leak-check-section fade-section">
     <div class="container" style="text-align: center; max-width: 760px;">
       <p class="section-label" style="color: var(--gray-500);">The Problem</p>
-      <h2 style="margin-top: 0;">You can't answer the phone from inside a showing.</h2>
-      <p style="color: var(--gray-700); font-size: 19px; margin: 24px auto 0; max-width: 640px;">You're walking a buyer through a house, sitting at a signing, or driving between appointments, and a call comes in that you can't take. Most people who reach voicemail never leave one. They just scroll to the next agent and call them instead. That's not a hustle problem, it's a coverage problem, and it's real commission slipping away every week. We catch them, automatically.</p>
+      <h2 style="margin-top: 0;">You can't answer the phone from the top of a roof.</h2>
+      <p style="color: var(--gray-700); font-size: 19px; margin: 24px auto 0; max-width: 640px;">You're on a site, running a machine, up a ladder, or done for the day, and a call comes in that no one can catch. As many as <strong>85% of people who hit voicemail never call back</strong>, they just dial the next contractor. That's not a staffing problem, it's a coverage problem, and it's real jobs slipping away every single week. We catch them, automatically.</p>
     </div>
   </section>
 
@@ -132,29 +132,29 @@
       <div style="text-align:center;">
         <p class="section-label" style="color: var(--gray-500);">How It Works</p>
         <h2 style="margin-top: 0;">Three steps. That's the whole thing.</h2>
-        <p style="color: var(--gray-700); font-size: 19px; margin: 24px auto 8px; max-width: 660px;">No black box, no new software, no new number. Here is exactly what happens once we turn it on.</p>
+        <p style="color: var(--gray-700); font-size: 19px; margin: 24px auto 8px; max-width: 660px;">No black box, no new software. Here is exactly what happens once we turn it on.</p>
       </div>
 
       <div class="scorecard-steps" style="max-width: 820px; margin-top: 44px;">
         <div class="scorecard-step">
           <p class="scorecard-step-number" style="color: var(--brand-blue);">Step 1</p>
-          <h4>A call comes in and you can't take it.</h4>
-          <p>You're mid-showing, on another line, or behind the wheel. It rings out.</p>
+          <h4>A call comes in and no one can grab it.</h4>
+          <p>You're on a machine, up a ladder, or already on another line. It rings out.</p>
         </div>
         <div class="scorecard-step">
           <p class="scorecard-step-number" style="color: var(--brand-blue);">Step 2</p>
           <h4>They get a text back in seconds.</h4>
-          <p>The instant the call is missed, they get a friendly text in your name: "Sorry I missed you, I'm with a client. Are you looking to buy or sell?"</p>
+          <p>The instant the call is missed, they get a friendly text in your company's name: "Sorry we missed you, what can we help with?"</p>
         </div>
         <div class="scorecard-step">
           <p class="scorecard-step-number" style="color: var(--brand-blue);">Step 3</p>
-          <h4>You get the lead, ready to call.</h4>
-          <p>They reply, we find out what they need and their best contact info, and hand you a warm lead, before they ever reach the next agent on the list.</p>
+          <h4>You get the lead, ready to close.</h4>
+          <p>They reply, we gather what they need and their best contact info, and hand you a warm lead ready for your call back, before they ever dial the next contractor.</p>
         </div>
       </div>
 
       <div style="text-align:center; margin-top: 48px;">
-        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2OlZ9rZ4mJamSR7L7h4c4WKMCAvyHrhgI7JeXjG6Jq-ywjh8hhdr-fsr69kFmXrvgtCOgiLoFD" class="btn btn-primary">Book a 15-min call</a>
+        <a href="contact.html" class="btn btn-primary">Book a free demo today</a>
       </div>
     </div>
   </section>
@@ -165,40 +165,41 @@
       <div style="text-align: center;">
         <p class="section-label" style="color: var(--gray-500);">Why It Works</p>
         <h2 style="margin-top: 0;">The warmest lead you'll ever get is the one calling you first.</h2>
-        <p style="color: var(--gray-700); font-size: 19px; margin: 24px auto 20px; max-width: 680px;">One deal is thousands of dollars in commission, so a single caught call is never small change. Someone phoning YOU is the hottest lead there is, they picked you out of every agent in the city. The problem is simple: if you can't pick up, they don't wait. They call the next name. Text them back in seconds and that deal stays yours.</p>
+        <p style="color: var(--gray-700); font-size: 19px; margin: 24px auto 20px; max-width: 680px;">A single job in most trades runs anywhere from $1,500 to $40,000 and up, so one caught call is never small change. Someone phoning YOU is the hottest lead there is, they picked you first. The problem is simple: if you can't pick up, they don't wait. They call the next name on the list. Text them back in seconds and that job stays yours.</p>
       </div>
 
       <div class="future-timeline fade-in" style="max-width: 720px; margin: 40px auto 0; text-align: left;">
         <div class="timeline-item">
-          <h4>It runs 24/7, while you're with clients.</h4>
-          <p>A call gets missed and the text fires automatically, evenings and weekends included. Nothing falls through while you're in a showing. You never lose another caller to voicemail.</p>
+          <h4>It runs 24/7, while you're on the tools.</h4>
+          <p>The phone rings, a call gets missed, and the text back fires automatically. Nothing falls through the cracks while your hands are full. You never lose another caller to voicemail.</p>
         </div>
         <div class="timeline-item">
-          <h4>One deal pays for it many times over.</h4>
-          <p>Catch a single extra client and it has paid for itself for the year. Everything after that is found money, every month, on autopilot.</p>
+          <h4>It pays for itself fast.</h4>
+          <p>One recovered job covers the cost, usually many times over. Catch even a few missed calls a week and everything after that is found money, every month, on autopilot.</p>
         </div>
         <div class="timeline-item">
-          <h4>You look like you have an assistant.</h4>
-          <p>Every caller gets an instant, professional reply in your name. You come across like an agent with a full team behind you, even when it's just you.</p>
+          <h4>You look bigger than you are.</h4>
+          <p>Every caller gets an instant, professional response in your name. You come across like a company with a full front office, even if it's just you and a crew.</p>
         </div>
         <div class="timeline-item">
           <h4>You learn nothing new.</h4>
-          <p>No new software to babysit, no logins, no new number. We set it up and run it. You keep working exactly the way you work today.</p>
+          <p>No new software to babysit. No logins. We set it up and run it. You keep working exactly the way you work today.</p>
         </div>
       </div>
 
       <div style="text-align:center; margin-top: 48px;">
-        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2OlZ9rZ4mJamSR7L7h4c4WKMCAvyHrhgI7JeXjG6Jq-ywjh8hhdr-fsr69kFmXrvgtCOgiLoFD" class="btn btn-primary">Book a 15-min call</a>
+        <a href="contact.html" class="btn btn-primary">Book a free demo today</a>
       </div>
     </div>
   </section>
 
-  <!-- Block 5: Who we are -->
+  <!-- Block 5: Built by real builders -->
   <section class="leak-check-section fade-section">
     <div class="container" style="text-align: center; max-width: 760px;">
       <p class="section-label" style="color: var(--gray-500);">Who We Are</p>
-      <h2 style="margin-top: 0;">Built by an owner-operator, not a software company.</h2>
-      <p style="color: var(--gray-700); font-size: 19px; margin: 24px auto 0; max-width: 640px;">Black Mountain Technologies comes from the same team behind <a href="https://blackmountaindirtworks.net" target="_blank" rel="noopener" style="font-weight: 600; text-decoration: underline; color: var(--brand-blue);">Black Mountain Dirt Works</a>, a real, owner-operated company on Vancouver Island. We built this because we were losing work to missed calls ourselves, and we run it on our own business first. You're dealing with the person who built it, not a support queue.</p>
+      <h2 style="margin-top: 0;">Built by contractors, for contractors.</h2>
+      <p style="color: var(--gray-700); font-size: 19px; margin: 24px auto 0; max-width: 640px;">Black Mountain Technologies comes from the same team behind <a href="https://blackmountaindirtworks.net" target="_blank" rel="noopener" style="font-weight: 600; text-decoration: underline; color: var(--brand-blue);">Black Mountain Dirt Works</a>, a real, owner-operated construction company on Vancouver Island. We run crews and job sites ourselves, so we know exactly how a call gets missed. We're not a software company guessing at your business. We built this because we were losing jobs to missed calls, same as you, and we run it on our own company first.</p>
+      <a href="https://blackmountaindirtworks.net" target="_blank" rel="noopener" class="btn btn-secondary" style="margin-top: 28px;">See our construction company</a>
     </div>
   </section>
 
@@ -233,13 +234,9 @@
           <h4>A real person, on Vancouver Island.</h4>
           <p>You're not calling a call center or filling out a form that disappears into a system. You deal with Michael, the owner, direct. Text or call <a href="tel:+12502542377" style="font-weight: 600; text-decoration: underline; color: var(--brand-blue);">(250) 254-2377</a> and you get a straight answer from the guy who built this.</p>
         </div>
-        <div class="timeline-item">
-          <h4>Setup is done for you, in a few days.</h4>
-          <p>You don't configure anything. We set it up, test it against your own phone, and show you it working before it goes live.</p>
-        </div>
       </div>
       <div style="text-align:center; margin-top: 44px;">
-        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2OlZ9rZ4mJamSR7L7h4c4WKMCAvyHrhgI7JeXjG6Jq-ywjh8hhdr-fsr69kFmXrvgtCOgiLoFD" class="btn btn-primary">Book a 15-min call</a>
+        <a href="contact.html" class="btn btn-primary">Book a free demo today</a>
       </div>
     </div>
   </section>
@@ -247,9 +244,9 @@
   <!-- Block 7: Trust / data -->
   <section class="cta fade-section" id="trust">
     <div class="container">
-      <h2>Your client data stays yours.</h2>
-      <p>Your callers are only ever contacted in your name. We never sell your data, never share it, and never hold onto it beyond the work. You are never handing your clients to a third party who does anything else with them.</p>
-      <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2OlZ9rZ4mJamSR7L7h4c4WKMCAvyHrhgI7JeXjG6Jq-ywjh8hhdr-fsr69kFmXrvgtCOgiLoFD" class="btn btn-primary">Book a 15-min call</a>
+      <h2>Your customer data stays yours.</h2>
+      <p>Your callers are only ever contacted in your company's name. We never sell your data, never share it, and never hold onto it beyond the work. You are never handing your customers to a third party who does anything else with them.</p>
+      <a href="contact.html" class="btn btn-primary">Book a free demo today</a>
     </div>
   </section>
 
@@ -264,12 +261,12 @@
         <li><a href="#how">How It Works</a></li>
         <li><a href="#why">Why It Works</a></li>
         <li><a href="#trust">Your Data</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2OlZ9rZ4mJamSR7L7h4c4WKMCAvyHrhgI7JeXjG6Jq-ywjh8hhdr-fsr69kFmXrvgtCOgiLoFD">Book a 15-min call</a></li>
+        <li><a href="https://blackmountaindirtworks.net" target="_blank" rel="noopener">Our Construction Company</a></li>
+        <li><a href="contact.html">Book a Free Demo</a></li>
       </ul>
     </div>
     <div class="container footer-trust">
-      <p>Missed-call text-back for real estate agents. When you can't answer, we catch the lead, so you can stay focused on your clients.</p>
+      <p>Missed-call text-back for construction companies. When you can't answer, we catch the job, so you can focus on the work on site.</p>
     </div>
   </footer>
 
