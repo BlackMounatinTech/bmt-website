@@ -322,6 +322,26 @@ nav .container {
   color: var(--brand-blue);
 }
 
+/* The proof line: sits between the headline and the sub, smaller than the
+   hook so the reader lands on their own situation first, not on a statistic. */
+.hero-stat {
+  max-width: 640px;
+  margin: 0 auto 4px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--gray-900, #111);
+}
+
+.hero-stat strong {
+  color: var(--brand-blue);
+  font-weight: 800;
+}
+
+@media (max-width: 600px) {
+  .hero-stat { font-size: 17px; }
+}
+
 .hero .hero-sub {
   font-size: 19px;
   margin: 0 auto 40px;
