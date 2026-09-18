@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Client setup | Black Mountain Technologies</title>
+<meta name="description" content="Tell Michael about your fencing business and current quoting process so we can plan your follow-up setup.">
+<link rel="icon" href="assets/favicon.png"><link rel="stylesheet" href="fencing.css?v=20260917b"><link rel="stylesheet" href="onboarding.css?v=1">
+<script src="onboarding.js?v=1" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to form</a>
+<header class="wrap nav"><a class="brand" href="/" aria-label="Black Mountain Technologies home"><img src="assets/logo-mountains.png" width="66" height="66" alt=""><span>BLACK MOUNTAIN<small>TECHNOLOGIES</small></span></a><a class="text-link" href="mailto:michael@blackmountaintechnologies.ca">Need a hand?</a></header>
+<main id="main" class="setup wrap">
+<div class="setup-heading"><p class="eyebrow">LET’S GET YOU SET UP</p><h1>Your quotes.<br><span>A little less chasing.</span></h1><p class="intro">Tell me how your business works. I’ll review your setup, confirm how we can connect your quotes, and send you the next steps.</p><p class="fine">About 5–8 minutes · Fields marked * are required · “Not sure” is a useful answer.</p></div>
+<aside class="setup-note"><strong>No logins needed here.</strong> Please don’t include passwords, API keys, tax IDs, or homeowner details. We’ll arrange access separately.</aside>
+<form id="onboarding" action="https://formspree.io/f/maqlvqwq" method="post">
+<input type="hidden" name="_subject" value="BMT — fencing client onboarding"><input type="hidden" name="form_type" value="Fencing quote follow-up onboarding v1">
+<div class="honeypot" aria-hidden="true"><label>Leave this empty<input name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+<fieldset><legend><span>01</span> Your business</legend><div class="fields">
+<label>Business / trading name *<input name="business_name" autocomplete="organization" required maxlength="150"></label>
+<label>Your name *<input name="contact_name" autocomplete="name" required maxlength="100"></label>
+<label>Your email *<input type="email" name="email" autocomplete="email" required maxlength="180"></label>
+<label>Best phone number *<input type="tel" name="contact_phone" autocomplete="tel" required maxlength="40"></label>
+<label>Website<input name="website" inputmode="url" placeholder="yourcompany.com" maxlength="250"></label>
+<label>Business city, state and country *<input name="business_location" required placeholder="Austin, Texas, USA" maxlength="180"></label>
+<label>Time zone *<select name="timezone" required><option value="">Choose one</option><option>Eastern</option><option>Central</option><option>Mountain</option><option>Pacific</option><option>Arizona (no daylight saving)</option><option>Other / not sure — confirm with me</option></select></label>
+<label>Areas you serve<input name="service_area" placeholder="Cities or counties" maxlength="250"></label>
+<label class="full">When is your team available to respond? *<input name="reply_hours" required placeholder="Example: Monday–Friday, 8 AM–5 PM local time" maxlength="250"></label>
+</div></fieldset>
+<fieldset><legend><span>02</span> How you quote today</legend><p class="section-help">We’ll check compatibility before choosing a connection. You don’t need to know anything about APIs.</p><div class="fields">
+<label>What do you use to create and send quotes? *<input name="quoting_software" required placeholder="Jobber, QuickBooks, Joist, a spreadsheet, paper…" maxlength="200"></label>
+<label>Software plan, if you know it<input name="software_plan" placeholder="Plan name, or not sure" maxlength="100"></label>
+<label>Where do customer details and replies live?<input name="customer_records" placeholder="Same app, Gmail, phone, another CRM…" maxlength="250"></label>
+<label>Roughly how many quotes do you send each month? *<select name="monthly_quotes" required><option value="">Choose one</option><option>Fewer than 10</option><option>10–24</option><option>25–49</option><option>50–99</option><option>100+</option><option>Not sure</option></select></label>
+<label class="full">What follow-up already happens? *<textarea name="current_followup" required rows="3" maxlength="2000" placeholder="Do you call or text yourself? Does your software already send reminders? It’s fine if there’s no regular process."></textarea></label>
+<label class="full">How do you record a quote being accepted, declined, or a job being booked? *<textarea name="quote_status_process" required rows="3" maxlength="2000" placeholder="Example: we mark it accepted in Jobber after a deposit. Sometimes customers accept by phone."></textarea></label>
+<label>Who manages access to your software? *<select name="access_owner" required><option value="">Choose one</option><option>I can invite a user or approve a connection</option><option>Someone else on my team manages access</option><option>I don’t use software</option><option>Not sure — help me check</option></select></label>
+<label>Software contact, if someone else<input name="software_contact" placeholder="Name and business email (optional)" maxlength="250"></label>
+<label class="full">If a direct connection isn’t available, what could work? *<select name="fallback_preference" required><option value="">Choose one</option><option>A quick manual update when a quote is sent or closed</option><option>A spreadsheet/export process — discuss the effort with me</option><option>Sending quotes from a different system — open to discussing</option><option>It needs to work with my current software automatically</option><option>Not sure — recommend an option</option></select></label>
+</div></fieldset>
+<fieldset><legend><span>03</span> Follow-up and replies</legend><div class="fields">
+<label>Preferred follow-up channel *<select name="followup_channel" required><option value="">Choose one</option><option>Email</option><option>Text messages</option><option>Email and text messages</option><option>Recommend what fits</option></select></label>
+<label>Who should receive replies and alerts? *<input name="reply_owner" required placeholder="Name + email and/or phone" maxlength="300"></label>
+<label>Customer-facing name<input name="sender_name" placeholder="Example: Ben at Cedar Fence Co." maxlength="150"></label>
+<label>Current customer-facing email / phone<input name="current_sender" placeholder="The details customers recognize" maxlength="250"></label>
+<label class="full">How do homeowners agree to receive your texts or emails? *<textarea name="customer_permission" required rows="3" maxlength="2000" placeholder="Describe your process or link to your request-a-quote form. If you don’t know, write ‘not sure’ — we’ll review it."></textarea></label>
+<label class="full">Any timing, tone, or customers we should avoid?<textarea name="followup_preferences" rows="3" maxlength="2000" placeholder="Example: no weekends, casual tone, exclude disputed jobs. Describe categories only — no homeowner names or contact details."></textarea></label>
+<label>Who approves the messages before launch? *<input name="message_approver" required placeholder="Name and email, or ‘me’" maxlength="250"></label>
+<label>Preferred start date<input type="date" name="preferred_start_date"><small>We’ll confirm timing after the connection review and any messaging approvals.</small></label>
+<label class="full">Anything else I should know?<textarea name="additional_notes" rows="3" maxlength="2000"></textarea></label>
+</div></fieldset>
+<div class="submit-panel"><h2>That’s enough to get started.</h2><p>Michael will review your answers and confirm the connection, any access needed, and a launch plan. No customer messages are started by this form.</p>
+<label class="check-label"><input type="checkbox" name="setup_acknowledgement" value="Agreed" required><span>I’m authorized to provide these business details and request setup. I understand that the connection and messages need to be confirmed before launch. *</span></label>
+<p class="privacy-note">Your answers are sent to Black Mountain Technologies through Formspree for onboarding. Don’t include credentials or customer records. For questions or deletion requests: <a href="mailto:michael@blackmountaintechnologies.ca">michael@blackmountaintechnologies.ca</a>.</p>
+<button class="button" id="submit-button" type="submit">Send my setup details <span aria-hidden="true">↗</span></button>
+<p id="form-status" role="status" aria-live="polite" tabindex="-1"></p>
+<div id="submit-fallback" hidden><p>If sending isn’t working, download your answers and attach the file in an email to <a href="mailto:michael@blackmountaintechnologies.ca?subject=My%20BMT%20setup%20details">Michael</a>.</p><button type="button" class="secondary" id="download-answers">Download my answers</button></div>
+<noscript><p>You can submit without JavaScript; Formspree will show the submission result.</p></noscript>
+</div>
+</form>
+<section id="success" hidden tabindex="-1" class="submit-panel success"><p class="eyebrow">DETAILS RECEIVED</p><h2>Thanks. I’ll take it from here.</h2><p>Your setup details were submitted. Michael will review them and contact you about software access, message approval, and launch timing.</p><p>You don’t need to send any passwords or customer lists right now.</p><a class="text-link" href="mailto:michael@blackmountaintechnologies.ca">Contact Michael ↗</a></section>
+</main><footer class="wrap"><p>Black Mountain Technologies · Client onboarding</p><a href="/">Back to website</a></footer>
+</body></html>
