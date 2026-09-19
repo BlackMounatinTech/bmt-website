@@ -24,7 +24,7 @@
         const y = height * .48 + Math.sin(a) * r * .82;
         j ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
       }
-      ctx.closePath(); ctx.strokeStyle = `rgba(181,215,148,${.09 + i / count * .14})`; ctx.lineWidth = .8; ctx.stroke();
+      ctx.closePath(); ctx.strokeStyle = `rgba(130,170,245,${.09 + i / count * .14})`; ctx.lineWidth = .8; ctx.stroke();
     }
   }
   function frame(now) {
