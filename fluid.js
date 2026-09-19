@@ -5,7 +5,7 @@
   const ctx = canvas.getContext('2d');
   const opening = document.querySelector('.opening');
   const film = document.querySelector('.film');
-  const video = document.querySelector('video');
+  const video = document.querySelector('.film video');
   const progress = document.querySelector('.reading-progress');
   let paused = reduced.matches, heroVisible = true, filmVisible = false, width = 0, height = 0;
   let raf = 0, last = 0, phase = 0, scrollQueued = false;
@@ -88,4 +88,14 @@
     opening.style.setProperty('--my', `${event.offsetY / height * 100}%`);
   }, {passive:true});
   resize(); scroll(); syncMotion();
+})();
+
+(() => {
+ const video=document.querySelector('#founder-video');
+ const button=document.querySelector('.intro-play');
+ if(!video || !button) return;
+ button.addEventListener('click',()=>{if(video.paused){video.play().catch(()=>{button.textContent='Use video controls ▷';});}else{video.pause();}});
+ video.addEventListener('play',()=>{button.textContent='Pause intro Ⅱ';document.querySelector('.film video')?.pause();});
+ video.addEventListener('pause',()=>{button.textContent='Play my intro ▷';});
+ video.addEventListener('ended',()=>{button.textContent='Watch again ↻';});
 })();
