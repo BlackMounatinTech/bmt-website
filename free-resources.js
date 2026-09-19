@@ -42,6 +42,7 @@
         ['Equivalent markup on costs', percent((price / cost - 1) * 100)],
         ['Currency', 'Same as your inputs. Sales tax is not included.']
       ]);
+      document.dispatchEvent(new CustomEvent('bmt:calculator_used', {detail: {tool: 'pricing-form'}}));
     } catch (e) { error(output, e.message); }
   });
   const quotes = document.getElementById('quotes-form');
@@ -60,6 +61,7 @@
         ['Accepted out of decided quotes', decided ? percent(accepted / decided * 100) : 'Not available—no decisions recorded yet.'],
         ['Decisions recorded', `${decided} of ${sent}`]
       ]);
+      document.dispatchEvent(new CustomEvent('bmt:calculator_used', {detail: {tool: 'quotes-form'}}));
     } catch (e) { error(output, e.message); }
   });
   document.querySelectorAll('[data-copy]').forEach(button => {
@@ -69,6 +71,7 @@
       try {
         await navigator.clipboard.writeText(text.textContent);
         status.textContent = 'Copied. Replace the brackets with your details.';
+        document.dispatchEvent(new CustomEvent('bmt:template_copied', {detail: {template: button.dataset.copy}}));
       } catch {
         const selection = window.getSelection();
         const range = document.createRange(); range.selectNodeContents(text);
