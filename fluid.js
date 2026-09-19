@@ -42,11 +42,21 @@
     draw();
   }
   function syncVideo() {
-    if (paused || document.hidden || !filmVisible || navigator.connection?.saveData) { video.pause(); return; }
+    if (paused || document.hidden || !filmVisible || navigator.connection?.saveData || (document.querySelector('#founder-video') && !document.querySelector('#founder-video').paused)) { video.pause(); return; }
     const source = video.querySelector('source');
     if (!source.src) { source.src = source.dataset.src; video.load(); }
+    // Set media properties explicitly for Safari and embedded browsers.
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
     video.play().catch(() => {});
   }
+  // Retry when the lazy-loaded media becomes playable.
+  video.addEventListener('canplay', syncVideo);
+  window.addEventListener('pageshow', syncVideo);
+  // A real touch/click can unlock playback in browsers restricting autoplay.
+  document.addEventListener('touchend', syncVideo, {passive: true});
+  document.addEventListener('click', syncVideo, {passive: true});
   function syncMotion() {
     document.documentElement.classList.toggle('motion-paused', paused);
     toggle.textContent = paused ? 'Play motion' : 'Pause motion';
@@ -75,6 +85,12 @@
   function scroll() {
     scrollQueued = false;
     const max = document.documentElement.scrollHeight - innerHeight;
+    const bounds = film.getBoundingClientRect();
+    const visibleNow = bounds.bottom > 0 && bounds.top < innerHeight;
+    if (visibleNow !== filmVisible || (visibleNow && video.paused)) {
+      filmVisible = visibleNow;
+      syncVideo();
+    }
     progress.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
     if (!paused && innerWidth > 700) {
       const amount = Math.max(0, Math.min(1, (innerHeight - film.getBoundingClientRect().top) / innerHeight));
