@@ -1,4 +1,4 @@
-import {questions,assess,tailoredPlan,label} from './checkup-engine.mjs';
+import {questions,assess,tailoredPlan,label} from './checkup-engine.mjs?v=2';
 const $=id=>document.getElementById(id),key='bmt-free-checkup-v1';
 let answers={},current=0,started=false,completed=false;
 const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
