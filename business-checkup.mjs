@@ -1,4 +1,4 @@
-import {questions,assess,tailoredPlan,label} from './checkup-engine.mjs?v=2';
+import {questions,assess,tailoredPlan,label} from './checkup-engine.mjs?v=3';
 const $=id=>document.getElementById(id),key='bmt-free-checkup-v1';
 let answers={},current=0,started=false,completed=false;
 const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
@@ -34,7 +34,7 @@ function result(){
  const why=section('Why this is the suggested starting point');why.append(list(r.reasons));if(answers.pain&&answers.pain!=='unknown'&&answers.pain!==r.primary){why.append(el('p',`You chose “${label(answers,'pain')}” as your concern. Your other answers suggest checking the priority above first. That does not rule out your original concern.`));}box.append(why);
  const actions=section('Three practical next steps');actions.append(list(p.actions,true));if(p.notes.length){actions.append(el('h3','A few details from your answers'),list(p.notes));}box.append(actions);
  const track=section('How to tell whether it is helping');track.append(el('p',p.metric),el('p','Record your starting point before making changes. Review it weekly; allow for seasonality and your normal sales and project timelines.'));box.append(track);
- if(r.secondary.length){const s=section('Also worth checking');for(const other of r.secondary){s.append(el('h3',({pricing:'Job costs and quoting',cash:'Payments and cash flow',capacity:'Workload and coordination',conversion:'Quote follow-up',leads:'Suitable inquiries',measurement:'Tracking the numbers'})[other.key]),el('p',other.reasons.join(' ')));}box.append(s);}
+ if(r.secondary.length){const s=section('Also worth checking');for(const other of r.secondary){s.append(el('h3',({pipeline:'Lead flow and winning suitable jobs',pricing:'Job costs and quoting',cash:'Payments and cash flow',capacity:'Workload and coordination',conversion:'Quote follow-up',leads:'Suitable inquiries',measurement:'Tracking the numbers'})[other.key]),el('p',other.reasons.join(' ')));}box.append(s);}
  const resources=section('Use the free resources');const links=el('div',undefined,'resource-links');for(const [text,url] of p.links)links.append(anchor(text+' ↗',url));resources.append(links);box.append(resources);
  const buttons=el('div',undefined,'result-actions');const download=el('button','Download my plan','button');download.type='button';download.addEventListener('click',()=>{const url=URL.createObjectURL(new Blob([planText()],{type:'text/plain;charset=utf-8'}));const a=anchor('',url);a.download='BMT-business-action-plan.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
  const edit=el('button','Review / change my answers','quiet');edit.type='button';edit.addEventListener('click',()=>{current=0;render(true);});buttons.append(download,edit);box.append(buttons);
