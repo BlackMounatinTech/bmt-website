@@ -94,7 +94,7 @@ export function questions(a){
 export function label(a,id){const question=questions(a).find(q=>q.id===id);return question?.options?.find(o=>o[0]===a[id])?.[1]||a[id]||'Not provided';}
 
 export function tailoredPlan(a,result=assess(a)) {
- const base=plans[result.primary];const out={...base,actions:[...base.actions],notes:[]};
+ const base=plans[result.primary];const out={...base,actions:[...base.actions],notes:[],remedies:practicalRemedies(a)};
  if(['pricing','launch'].includes(result.primary)){const trade=trades.find(t=>t[0]===a.trade)||trades.at(-1);out.notes.push(`For ${trade[1].toLowerCase()}, check ${trade[2]} when building the quote.`);}
  if(result.primary==='launch'){
   if(a.launch_service!=='yes')out.notes.push('Your service or ideal customer is still being defined. Start there.');
@@ -133,4 +133,39 @@ export function tailoredPlan(a,result=assess(a)) {
  if(a.leadflow==='too_many'&&a.capacity==='room')out.notes.push('You reported more inquiries than you can handle, but room for more work. Check whether inquiry quality or sales admin explains the difference.');
  if(a.goal==='grow'&&['pricing','cash','capacity','measurement'].includes(result.primary))out.notes.push('You want to grow. Check this foundation before adding more sales volume or commitments.');
  return out;
+}
+
+// Practical exercises are suggestions, not forecasts or guaranteed fixes.
+export function practicalRemedies(a){
+ if(a.stage==='planning')return [];
+ const items=[];
+ const few=a.leadflow==='few';
+ const lost=['ghost','cheaper','mixed','postponed'].includes(a.quote_outcome);
+ if(few){items.push({title:'When there isn’t enough work: start with people who know your work',steps:[
+ 'As a starting exercise, reconnect with five past customers you had a good relationship with. Ask how they are and mention something specific to their project. Ask whether they know anyone who needs your service; do not make them feel obliged to refer you.',
+ 'Reach out to three complementary local trades or suppliers. Explain the jobs and area you cover, show a relevant example, and ask whether your services would help their customers. For example, an excavator and a landscaper may have suitable work to pass between them.',
+ 'Post one recent job with the customer’s permission: the problem, what you did, photos, service area and how to inquire. Make your website and business profile show the same clear offer. Mention available dates only if they are real.'
+ ],scripts:[{label:'Past-customer check-in',text:'Hey [name], how have you been? How’s [specific detail you remember]? Hope [project] is still working well for you. Do you happen to know anyone who might need help with [service] around [area]?'}],track:'Record who you contacted, replies, suitable inquiries and quotes. These activity numbers are a starting exercise, not an expected number of jobs.'});}
+ if(a.quote_outcome==='ghost'||a.quote_outcome==='mixed'||a.c_reason==='silent'||a.c_comparison==='assumed')items.push({title:'When customers ghost: make it easy to give you an answer',steps:[
+ 'Before sending the quote, ask when they hope to decide and agree on a useful follow-up date. Offer a short walkthrough so they understand the scope instead of leaving the price to explain itself.',
+ 'If no date was agreed, one possible cadence is a receipt check after a couple of business days, a project-status check the following week, then a final close-the-loop note. Adjust to their project and responses; this is not a required sequence or a reason to keep chasing.',
+ 'Ask whether the project is still happening, whether something is unclear, or whether plans changed. Record the answer. A lack of response is still “undecided / no response,” not proof that another contractor won. Stop if they decline or ask you to stop.'
+ ],scripts:[{label:'Check the quote arrived',text:'Hey [name], just checking the quote for [project] reached you. Is anything unclear, or would it help if I walked you through what’s included?'},{label:'Find out where it stands',text:'Hey [name], is [project] still on your list, or have plans changed? No pressure either way — I just want to keep my notes straight.'},{label:'Close the loop',text:'I’ll leave this with you for now, [name]. If you decide to pick the project back up, feel free to reach out and we can check the scope, current pricing and availability.'}],track:'Replies and stated reasons, not just message count. If follow-up is already consistent, focus on customer fit, clarity and timing.'});
+ if(a.quote_outcome==='cheaper'||a.quote_outcome==='mixed'||a.c_reason==='price'||['comparable','different','reported'].includes(a.c_comparison))items.push({title:'When someone is cheaper: compare the job before changing the price',steps:[
+ 'Ask what the other quote includes, without pressuring the customer to share it. Compare quantities, preparation, materials, removal, cleanup, exclusions, timing and any actual warranty. Do not invent differences or suggest the other contractor will do poor work.',
+ 'Explain the parts of your quote that matter to this customer. Back them up with relevant completed work, honest customer feedback and clear terms. “Better quality” alone is not a useful explanation.',
+ 'Work out your costs and the margin you need before offering a different price. If it is genuinely the same work at a lower competing price, review your costs and fit. You can offer an optional smaller scope or practical phases, or politely decline. Do not remove necessary preparation or safety work to win.',
+ 'If several comparable jobs are lost on price, look for a pattern in job type, customer, service area and cost structure. Test a clearer offer or a better-fit job category rather than discounting every quote.'
+ ],scripts:[{label:'Discuss the comparison',text:'Thanks for letting me know. Do you know whether their quote includes [specific item actually included in your quote]? I’m happy to compare what’s included so you can make a fair decision. If budget is the main issue, we can also look at whether a smaller scope would work.'},{label:'Hold a workable price',text:'For the scope we’ve agreed on, this is the price I can do the job properly at. If it helps, I can price [genuine optional alternative] separately. If the other option is a better fit, I understand.'}],track:'Confirmed price losses, whether scopes were comparable, and profitability on the work you win. Winning more unprofitable jobs does not solve a quiet calendar.'});
+ if(lost||a.c_fit==='some'||a.c_fit==='no')items.push({title:'Before the next quote: qualify the job and make the decision clearer',steps:[
+ 'Have a short conversation about the project, location, scope, timing, rough budget and who needs to approve it before investing hours in a detailed quote. If they do not know their budget, explain the main options and what affects cost.',
+ 'Send a quote that states the actual work, inclusions, exclusions, terms and how to accept. Add a few relevant job photos and an honest customer reference or review where you have permission to use it.',
+ 'Ask what matters most in choosing a contractor and agree on the next step. Use that answer to explain your offer; avoid making assumptions about whether they only care about price.'
+ ],scripts:[{label:'Learn what matters',text:'Before I put this together, what matters most to you when choosing who does the work? And is there a budget range or deadline I should work around? If you’re not sure yet, I can explain the options.'}],track:'Time spent quoting, how many inquiries fit, and won/lost outcomes. Compare decided quotes separately from ones still awaiting a decision.'});
+ if(a.demand==='lower'||a.quote_outcome==='postponed'||a.c_reason==='timing')items.push({title:'When the market feels quiet or projects get postponed',steps:[
+ 'Compare the same season and your own lead sources. Check whether fewer people are asking, fewer inquiries fit, or more projects are being delayed. Each calls for a different response; a quiet week alone does not establish a market trend.',
+ 'Ask past customers and complementary trades what work is still needed. Consider smaller repair, maintenance or phased projects only where they fit your skills, equipment and required qualifications, and still leave a worthwhile margin.',
+ 'For postponed projects, ask whether the customer wants a check-in at a specific time. If not, leave it with them. Use spare time to improve job photos, quote clarity and cost records, while testing one focused source of work.'
+ ],scripts:[{label:'Agree on a later follow-up',text:'That makes sense. Would it help if I checked back around [time], or would you rather reach out when you’re ready?'}],track:'Inquiries and job decisions over comparable periods, postponement reasons, and whether a follow-up was actually requested.'});
+ return items;
 }
