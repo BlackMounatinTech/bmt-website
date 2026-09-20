@@ -68,5 +68,8 @@
   document.addEventListener('bmt:template_copied', event => {
     if (typeof event.detail?.template === 'string' && /^text-[a-z-]+$/.test(event.detail.template)) send('template_copy', {resource_name: event.detail.template});
   });
+  document.addEventListener('bmt:checkup', event => {
+    if (['start', 'complete'].includes(event.detail?.event)) send('checkup_' + event.detail.event);
+  });
   document.getElementById('founder-video')?.addEventListener('play', () => send('intro_video_start'), {once: true});
 })();
