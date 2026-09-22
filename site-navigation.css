@@ -4,3 +4,7 @@
 
 /* A visible booking route on every main and resource page. */
 .bmt-header nav.bmt-navigation>a.nav-consult{background:#245ee8;color:white;border-color:#245ee8}.bmt-header nav.bmt-navigation>a.nav-consult:hover{background:#174abb}.bmt-header nav.bmt-navigation>a.nav-checkup{background:transparent;color:#174abb;border-color:#c7d8fa}.nav-shell .bmt-header nav.bmt-navigation>a.nav-checkup{background:transparent;color:#e2eaf6;border-color:#64748b}.hero-consult-note{font-size:13px!important;color:#cbd5e1!important;margin-top:12px!important}@media(max-width:600px){.bmt-header nav.bmt-navigation>a.nav-consult{grid-column:1/-1;min-height:44px;font-size:13px!important}}
+
+/* Three clear destinations; resources remain available inside the resource hub. */
+@media(max-width:600px){.bmt-header nav.bmt-navigation{grid-template-columns:1fr 1fr 1fr}.bmt-header nav.bmt-navigation>a.nav-consult{grid-column:auto;font-size:11px!important}.bmt-header nav.bmt-navigation>a{min-height:44px}.bmt-header{padding-bottom:12px!important}}
+.resource-start-links{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}.resource-start-links a{display:inline-flex;padding:14px 18px;border:1px solid #c7d8fa;border-radius:10px;background:#edf3ff;color:#174abb;font-weight:700;text-decoration:none}.resource-start-links a:hover{background:#dae7ff}.resource-start-links a:focus-visible{outline:3px solid #245ee8;outline-offset:3px}.guide-tile[id]{scroll-margin-top:24px}
