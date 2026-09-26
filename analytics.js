@@ -45,7 +45,7 @@
     if (!link) return;
     let url;
     try { url = new URL(link.href, location.href); } catch { return; }
-    if (url.hostname === 'buy.stripe.com' && url.pathname === '/6oUdR9bJm4eCcL90vt3cc0f') {
+    if (url.origin === location.origin && url.pathname.startsWith('/book')) {
       send('consultation_checkout_click', {placement: placement(link), service_name: 'business_review_30min'});
     } else if (url.origin === location.origin && url.pathname === '/consultation.html') {
       send('consultation_click', {placement: placement(link), service_name: 'business_review_30min'});
