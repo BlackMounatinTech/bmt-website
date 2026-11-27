@@ -1,11 +1,7 @@
-# BMT visual redesign
+# BMT homepage
 
-Existing homepage copy and destinations are preserved.
+November 26, 2026: Minimal advertising-focused redesign. Homepage uses minimal.css and native scrolling, without animation libraries. Prior motion assets are retained for history but not loaded.
 
-Uses Lenis 1.3.29 (MIT) and Three.js 0.187.0 (MIT), vendored with their licenses in assets/vendor. Three.js is loaded lazily.
+Recorded CAD spend and quote totals are displayed separately from explicitly illustrative attribution and closing scenarios. Account-wide spend is not represented as exclusively Dirt Works spend.
 
-Rebuild: `npx --yes --package=esbuild esbuild future-source.js --bundle --splitting --format=esm --minify --outdir=assets/motion --entry-names=future --chunk-names=scene-[hash] --legal-comments=linked`
-
-Desktop smooth scrolling; native touch scrolling. Honors reduced motion and includes a motion pause control. All content remains readable without JavaScript or WebGL.
-
-Validated at widths 1440, 1024, 768, 390 and 320: no horizontal overflow or broken images. Navigation anchors, FAQ disclosure, motion pause and reduced-motion visibility checked in browser.
+Checked 320, 390, 768, 1024 and 1440px layouts for overflow and image loading; inspected desktop, results and mobile screenshots. Contact buttons open email; phone link uses tel.
